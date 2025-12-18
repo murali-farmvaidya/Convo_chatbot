@@ -700,10 +700,13 @@
     showThinking();
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/chat", {
+      const res = await fetch("/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ session_id: sessionId, message })
+        body: JSON.stringify({
+          session_id: sessionId,
+          message: message
+        })
       });
 
       const data = await res.json();
@@ -723,7 +726,7 @@
 
   async function newChat() {
     try {
-      await fetch("http://127.0.0.1:8000/reset", {
+      await fetch("/reset", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ session_id: sessionId })
@@ -742,8 +745,8 @@
         </div>
       `;
       isWelcomeScreen = true;
-    } catch (error) {
-      console.error("Error resetting chat:", error);
+    } catch (err) {
+      console.error("Reset failed", err);
     }
   }
 
