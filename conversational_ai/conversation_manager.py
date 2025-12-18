@@ -3,7 +3,7 @@ import os
 import re
 import requests
 
-LIGHTRAG_URL = "http://localhost:9621/query"
+LIGHTRAG_URL = "https://convo-chatbot.onrender.com/query"
 SESSION_FILE = "session_store.json"
 
 

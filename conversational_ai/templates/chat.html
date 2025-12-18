@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FarmVaidya - Agriculture Assistant</title>
+  <link rel="icon" type="image/png" href="/static/title.png" />
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     * {
@@ -77,6 +78,13 @@
 
     .logo-text {
       color: #66bb6a;
+    }
+
+    .logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .user-info {
@@ -445,7 +453,7 @@
 <div id="chat-container">
   <div class="header">
     <div class="header-left">
-      <div class="logo">farm<span class="logo-text">vaidya</span></div>
+      <img class="logo-img" src="/static/logo.png?v=1" alt="FarmVaidya logo" />
     </div>
     <div class="header-right">
       <button class="new-chat-btn" onclick="newChat()">+ New Chat</button>
